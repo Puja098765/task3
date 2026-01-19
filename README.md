@@ -50,3 +50,14 @@ Visual hierarchy using spacing and typography
 Responsive behavior for smaller screens
 
 box-sizing: border-box for layout consistency
+
+## 🎯 Task Objective (Task 3)
+**Create a Responsive Layout Using Flexbox**
+
+Key goals:
+- Align navigation items using Flexbox
+- Create responsive content cards
+- Make the layout mobile-friendly
+- Use `flex-wrap`, `justify-content`, and `align-items`
+- Test responsiveness using browser DevTools
+
