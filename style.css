@@ -39,10 +39,13 @@ body {
    ========================= */
 .nav-list {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+    display: flex;                 /* Enable Flexbox */
+    justify-content: center;       /* Center links horizontally */
+    align-items: center;           /* Align links vertically */
+    gap: 25px;                     /* Space between items */
+    flex-wrap: wrap;               /* Wrap on small screens */
 }
+
 
 .nav-list a {
     color: #ffffff;
@@ -61,9 +64,14 @@ body {
    ========================= */
 .container {
     max-width: 900px;
-    margin: auto;        /* Center container horizontally */
+    margin: auto;
     padding: 0 20px;
+
+    display: flex;                 /* Enable Flexbox */
+    flex-direction: column;        /* Stack cards vertically */
+    gap: 30px;                     /* Space between cards */
 }
+
 
 /* =========================
    CARD (BOX MODEL CORE)
@@ -75,6 +83,13 @@ body {
     border: 2px solid #e2e8f0;
     border-radius: 12px;
 }
+#about article {
+    display: flex;                 /* Enable Flexbox */
+    align-items: center;           /* Align image & text vertically */
+    gap: 20px;                     /* Space between image and text */
+    flex-wrap: wrap;               /* Stack on small screens */
+}
+
 
 /* Temporary border visualization (learning purpose) */
 /*
@@ -111,12 +126,16 @@ body {
    LISTS
    ========================= */
 .skill-list {
+    display: flex;                 /* Enable Flexbox */
+    flex-wrap: wrap;               /* Allow wrapping */
+    gap: 12px 30px;                /* Space between items */
     padding-left: 20px;
 }
 
 .skill-list li {
-    margin-bottom: 8px;
+    flex: 1 1 200px;               /* Responsive skill width */
 }
+
 
 /* =========================
    FOOTER
@@ -128,3 +147,19 @@ body {
     padding: 15px;
     margin-top: 40px;
 }
+@media (max-width: 600px) {
+
+    .nav-list {
+        gap: 15px;                 /* Reduce spacing on mobile */
+    }
+
+    #about article {
+        justify-content: center;   /* Center content */
+        text-align: center;
+    }
+
+    .profile-img {
+        margin: auto;
+    }
+}
+
